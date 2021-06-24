@@ -1,0 +1,13 @@
+helmCharts:
+- name: prometheus-operator
+  repo: https://charts.cloudposse.com/incubator
+  version: 0.2.0
+  releaseName: my-prometheus-operator
+
+namespace: monitoring
+
+commonAnnotations:
+  hydration-tool: kustomize
+
+commonLabels:
+  team: monitoring
