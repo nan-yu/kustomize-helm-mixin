@@ -11,3 +11,8 @@ commonAnnotations:
 
 commonLabels:
   team: monitoring
+
+patches:
+- path: ignore-deployment-mutation-patch.yaml
+  target:
+    kind: Deployment
