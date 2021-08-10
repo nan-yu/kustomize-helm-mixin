@@ -1,18 +1,2 @@
-helmCharts:
-- name: prometheus
-  repo: https://prometheus-community.github.io/helm-charts
-  version: 14.3.0
-  releaseName: my-prometheus
-
-namespace: monitoring
-
-commonAnnotations:
-  hydration-tool: kustomize
-
-commonLabels:
-  team: monitoring
-
-patches:
-- path: ignore-deployment-mutation-patch.yaml
-  target:
-    kind: Deployment
+resources:
+- overlay
